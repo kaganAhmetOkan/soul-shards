@@ -1,8 +1,8 @@
 import style from "./Hero.module.css";
 
-export default function Hero({ children }) {
+export default function Hero({ children, color }) {
   return (
-    <div className={style.main}>
+    <div data-color={color} className={style.main}>
       {children}
     </div>
   );

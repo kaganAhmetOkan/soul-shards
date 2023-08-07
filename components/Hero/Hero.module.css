@@ -16,5 +16,26 @@
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-direction: normal;
+  text-transform: capitalize;
   color: var(--accent);
+}
+
+.main[data-color="green"] {
+  color: var(--p-green);
+}
+
+.main[data-color="purple"] {
+  color: var(--p-purple);
+}
+
+.main[data-color="white"], .main[data-color="black"] {
+  color: var(--fg);
+}
+
+.main[data-color="grey"] {
+  color: var(--p-dark-white);
+}
+
+.main[data-color="red"] {
+  color: var(--p-red);
 }

@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <nav className={style.main} data-active={isActive} onClick={handleClick}>
-      <MenuButton />
+      <MenuButton isActive={isActive} />
       <NavButton icon={iconHome} alt="Home" isActive={isActive} href="/">Home</NavButton>
       <NavButton icon={iconSpells} alt="Spells" isActive={isActive} href="/spell-schools">Spell Schools</NavButton>
     </nav>
