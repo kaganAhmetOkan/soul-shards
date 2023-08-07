@@ -1,7 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   color: var(--p-white);
   background-color: var(--p-light-black);
   position: sticky;
@@ -10,4 +10,9 @@
   width: var(--nav-width);
   padding: var(--nav-padding);
   gap: 1rem;
+  transition: 350ms;
+}
+
+.main[data-active="true"] {
+  width: calc(var(--nav-width) * 10);
 }

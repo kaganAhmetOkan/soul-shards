@@ -4,12 +4,16 @@ import { useState } from "react";
 
 export default function MenuButton() {
   const [isActive, setActive] = useState(false);
+
+  function handleClick() {
+    setActive(!isActive);
+  };
   
   return (
-    <div className={style.main} data-active={isActive} onClick={() => setActive(!isActive)}>
-      <div className={style.top}></div>
-      <div className={style.mid}></div>
-      <div className={style.bot}></div>
+    <div id="menu-button" className={style.main} data-active={isActive} onClick={handleClick}>
+      <div id="menu-button-top" className={style.top}></div>
+      <div id="menu-button-mid" className={style.mid}></div>
+      <div id="menu-button-bot" className={style.bot}></div>
     </div>
   );
 };
