@@ -1,9 +1,10 @@
 import style from "./page.module.css";
+import Hero from "@/components/Hero/Hero";
 
 export default function Home() {
   return (
     <main className={style.main}>
-      <h1 className={style.hero}>Soul Shards</h1>
+      <Hero>Soul Shards</Hero>
     </main>
   );
 };

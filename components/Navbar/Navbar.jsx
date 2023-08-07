@@ -4,6 +4,7 @@ import MenuButton from "../MenuButton/MenuButton";
 import NavButton from "../NavButton/NavButton";
 import { useState } from "react";
 import iconSpells from "@/public/spells.png";
+import iconHome from "@/public/home.png";
 
 export default function Navbar() {
   const [isActive, setActive] = useState(false);
@@ -17,7 +18,8 @@ export default function Navbar() {
   return (
     <nav className={style.main} data-active={isActive} onClick={handleClick}>
       <MenuButton />
-      <NavButton icon={iconSpells} alt="Spells" isActive={isActive} href="/schools">Spell Schools</NavButton>
+      <NavButton icon={iconHome} alt="Home" isActive={isActive} href="/">Home</NavButton>
+      <NavButton icon={iconSpells} alt="Spells" isActive={isActive} href="/spell-schools">Spell Schools</NavButton>
     </nav>
   );
 };
