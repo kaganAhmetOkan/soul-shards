@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Revealing Light",
+    "cost": {
+      "purple": 2
+    },
+    "explanation": "You create a source of dim light on the point you choose within range. The light illuminates a 30 feet radius. For the duration, any creature that the light touches is semi-transparent and can be targeted for attacks as if they were visible. All attack rolls made to creatures that the light touches gains Disadvantage. A creature with greater invisibility cast on them is not affected. For each Purple point spent after 2, affected area is increased by 5 feet.",
+    "details": {
+      "duration": "1 hour",
+      "range": "60 feet"
+    }
+  },
+  {
+    "name": "Degrading Metal",
+    "cost": {
+      "purple": 1
+    },
+    "explanation": "You curse the armour or weapon of a creature within range. A cursed weapon has -1 to damage and attack rolls made with it for the duration. A cursed armour has -2 AC for the duration. For each Purple point spent after 1, damage and attack rolls are decreased by 1. For each Purple point spent after 1, armour AC is decreased by 1. Target both armour and weapon for 2 Black points.",
+    "details": {
+      "duration": "1 hour",
+      "range": "60 feet"
+    }
+  }
+]

@@ -1,0 +1,59 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--p-light-black);
+  padding: 1rem;
+  border-radius: 100px;
+  transition: 250ms;
+}
+
+.main[data-color="purple"] .img {
+  background: radial-gradient(var(--bg) 50%, var(--p-purple));
+}
+
+.main[data-color="green"] .img {
+  background: radial-gradient(var(--bg) 50%, var(--p-green));
+}
+
+.main[data-color="red"] .img {
+  background: radial-gradient(var(--bg) 50%, var(--p-red))
+}
+
+.main[data-color="white"] .img {
+  background: radial-gradient(var(--bg) 50%, white);
+}
+
+.main[data-color="black"] .img {
+  background: radial-gradient(var(--bg) 50%, black)
+}
+
+.main[data-color="grey"] .img {
+  background: radial-gradient(var(--bg) 50%, var(--p-dark-white))
+}
+
+.main:hover .img {
+  scale: 1.1;
+}
+
+.main:active .img {
+  scale: 1;
+}
+
+.title {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .main[data-color="white"] .img {
+    background: radial-gradient(var(--bg), var(--p-dark-white));
+  }
+}
