@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Life Vortex",
+    "cost": {
+      "black": 3
+    },
+    "explanation": "You create a dark vortex that sucks up all life energy around the caster. All creatures within range has to make a Constitution saving throw and lose 2d4 worth of hit points if they fail. A creature cannot be killed by this spell. If a creature does not have enough hit points, they drop to 1 hit points instead, and the caster receives what hit point they could steal. For each Black points spent after 3, damage is increased by 1d4. For each Black points spent after 3, range is increased by 5 feet.",
+    "details": {
+      "range": "10 feet",
+      "duration": "Instant"
+    }
+  }
+]
