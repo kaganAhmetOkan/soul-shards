@@ -1,0 +1,28 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.main > div {
+  width: 40px;
+  height: 6px;
+  background-color: var(--p-white);
+  transition: 200ms;
+}
+
+.main[data-active="true"] > .top {
+  transform: translateY(17px) rotate(135deg);
+}
+
+.main[data-active="true"] > .mid {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.main[data-active="true"] > .bot {
+  transform: translateY(-17px) rotate(45deg);
+}
