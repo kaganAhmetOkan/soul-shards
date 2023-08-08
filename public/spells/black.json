@@ -9,5 +9,16 @@
       "range": "10 feet",
       "duration": "Instant"
     }
+  },
+  {
+    "name": "Sever the Bloodline",
+    "cost": {
+      "black": 4
+    },
+    "explanation": "Choose a kin, creatures from the chosen kin in a 30 feet radius rolls constitution saving throw, on a failed save they take 2d10+5 damage on success they take no damage. For each black points after 4, add another 1d10.",
+    "details": {
+      "range": "30 feet",
+      "duration": "Instant"
+    }
   }
 ]

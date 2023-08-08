@@ -5,7 +5,7 @@ export default function SpellSchools() {
 
   return (
     <main>
-      <Hero>Spell Schools</Hero>
+      <Hero>Soul Shards</Hero>
       <Schools />
     </main>
   );
