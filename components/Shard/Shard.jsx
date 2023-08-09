@@ -1,8 +1,8 @@
-import style from "./School.module.css";
+import style from "./Shard.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function School({ href, icon, name, children }) {
+export default function Shard({ href, icon, name, children }) {
   return (
     <Link className={style.main} href={href} data-colors="default" data-color={name}>
       <div className={style.img}>

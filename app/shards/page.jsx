@@ -1,12 +1,12 @@
 import Hero from "@/components/Hero/Hero";
-import Schools from "@/components/Schools/Schools";
+import Shards from "@/components/Shards/Shards";
 
-export default function SpellSchools() {
+export default function ShardsPage() {
 
   return (
     <main>
       <Hero>Soul Shards</Hero>
-      <Schools />
+      <Shards />
     </main>
   );
 };

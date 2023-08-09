@@ -1,21 +1,21 @@
-import style from "./Schools.module.css";
-import School from "../School/School";
+import style from "./Shards.module.css";
+import Shard from "../Shard/Shard";
 
-export default function Schools() {
+export default function Shards() {
   const shards = ["purple", "black", "green", "white", "red", "grey"]
 
   return (
     <div className={style.main}>
       {shards.map(shard => {
         return (
-          <School 
+          <Shard 
             icon={`/${shard}.png`} 
             key={shard} 
-            href={`/spell-schools/${shard}`} 
+            href={`/shards/${shard}`} 
             name={shard}
           >
             {shard}
-          </School>
+          </Shard>
         )
       })}
     </div>

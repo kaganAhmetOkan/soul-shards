@@ -19,7 +19,7 @@ export default function Navbar() {
     <nav className={style.main} data-active={isActive} onClick={handleClick}>
       <MenuButton isActive={isActive} />
       <NavButton icon={iconHome} alt="Home" isActive={isActive} href="/">Home</NavButton>
-      <NavButton icon={iconSpells} alt="Spells" isActive={isActive} href="/spell-schools">Spell Schools</NavButton>
+      <NavButton icon={iconSpells} alt="Spells" isActive={isActive} href="/shards">Soul Shards</NavButton>
     </nav>
   );
 };
