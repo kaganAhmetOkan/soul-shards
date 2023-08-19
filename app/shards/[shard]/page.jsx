@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import Hero from "@/components/Hero/Hero";
+import Spells from "@/components/Spells/Spells";
 import fetchData from "@/utils/fetchData";
 
 export default async function ShardPage({ params }) {
@@ -15,6 +16,7 @@ export default async function ShardPage({ params }) {
   return (
     <main>
       <Hero color={params.shard}>{`${params.shard} shard`}</Hero>
+      <Spells spells={spells}/>
     </main>
   );
 };

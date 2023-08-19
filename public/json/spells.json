@@ -3,33 +3,62 @@
     "name": "Degrading Metal",
     "schools": ["purple"],
     "base_cost": [
-      {"purple": 1}
+      {
+        "school": "purple",
+        "amount": 1
+      }
     ],
     "extra_cost": [
-      {"black": 2}
+      {
+        "school": "black",
+        "amount": 2
+      }
     ],
     "range": 60,
     "duration": "1 hour",
-    "explanation": ""
+    "synopsis": ""
   },
   {
     "name": "Revealing Light",
     "schools": ["purple"],
     "base_cost": [
-      {"purple": 2}
+      {
+        "school": "purple",
+        "amount": 2
+      }
     ],
     "range": 60,
     "duration": "1 hour",
-    "explanation": ""
+    "synopsis": ""
   },
   {
     "name": "Counterspell",
     "schools": ["purple"],
     "base_cost": [
-      {"purple": 3}
+      {
+        "school": "purple",
+        "amount": 3
+      }
     ],
     "range": 120,
     "duration": "Instantaneous",
-    "explanation": ""
+    "synopsis": ""
+  },
+  {
+    "name": "Creeping Fire",
+    "schools": ["red", "green"],
+    "base_cost": [
+      {
+        "school": "red",
+        "amount": 1
+      },
+      {
+        "school": "green",
+        "amount": 1
+      }
+    ],
+    "range": 60,
+    "duration": "18 seconds (minimum)",
+    "synopsis": "A fire starts spreading from the point you choose within range to two more squares. The fire spreads to a square after each creature's turn."
   }
 ]

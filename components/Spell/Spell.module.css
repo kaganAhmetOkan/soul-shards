@@ -1,0 +1,73 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.titleBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--p-dark-white);
+  padding: 4px;
+  cursor: pointer;
+}
+
+.titleBar > h2 {
+  color: var(--bg);
+  user-select: none;
+}
+
+.costs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  color: var(--bg);
+  background-color: var(--fg);
+  width: 1rem; height: 1rem;
+  border-radius: 1rem;
+}
+
+.cost[data-color="purple"] {
+  background-color: var(--p-purple);
+}
+
+.cost[data-color="green"] {
+  background-color: var(--p-green);
+}
+
+.cost[data-color="red"] {
+  background-color: var(--p-red);
+}
+
+.cost[data-color="white"] {
+  color: var(--p-black);
+  background-color: var(--p-white);
+}
+
+.cost[data-color="black"] {
+  color: var(--p-white);
+  background-color: var(--p-black);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid var(--p-dark-white);
+  border-top: none;
+  height: 0;
+  overflow: hidden;
+  transition: 250ms;
+}
+
+.main[data-enlarged="true"] .details {
+  padding: 0.5rem;
+  height: 500px;
+}
