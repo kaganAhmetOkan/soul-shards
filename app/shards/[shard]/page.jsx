@@ -10,8 +10,7 @@ export default async function ShardPage({ params }) {
     redirect("/shards");
   };
 
-  const spells = await fetchData(`${localhost}/spells/${params.shard}.json`);
-  console.log(spells);
+  const spells = await fetchData(`${localhost}/json/spells.json`);
 
   return (
     <main>

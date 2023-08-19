@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Degrading Metal",
+    "schools": ["purple"],
+    "base_cost": [
+      {"purple": 1}
+    ],
+    "extra_cost": [
+      {"black": 2}
+    ],
+    "range": 60,
+    "duration": "1 hour",
+    "explanation": ""
+  },
+  {
+    "name": "Revealing Light",
+    "schools": ["purple"],
+    "base_cost": [
+      {"purple": 2}
+    ],
+    "range": 60,
+    "duration": "1 hour",
+    "explanation": ""
+  },
+  {
+    "name": "Counterspell",
+    "schools": ["purple"],
+    "base_cost": [
+      {"purple": 3}
+    ],
+    "range": 120,
+    "duration": "Instantaneous",
+    "explanation": ""
+  }
+]

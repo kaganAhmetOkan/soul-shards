@@ -9,7 +9,7 @@ export default function Shards() {
       {shards.map(shard => {
         return (
           <Shard 
-            icon={`/${shard}.png`} 
+            icon={`/images/${shard}.png`} 
             key={shard} 
             href={`/shards/${shard}`} 
             name={shard}
