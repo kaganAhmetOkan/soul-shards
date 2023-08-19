@@ -6,6 +6,7 @@ import { useParams } from "next/navigation";
 export default function Spell({ spell }) {
   const [enlarged, setEnlarged] = useState(false);
   const params = useParams();
+  const range = Number.isInteger(spell.range) ? `${spell.range} feet` : spell.range;
 
   return (
     <div className={style.main} data-enlarged={enlarged} data-color={params.shard}>
@@ -23,7 +24,7 @@ export default function Spell({ spell }) {
       </div>
       <div className={style.details}>
         <p className={style.synopsis}>{spell.synopsis}</p>
-        <div>{`Range: ${spell.range} feet`}</div>
+        <div>{`Range: ${range}`}</div>
         <div>{`Duration: ${spell.duration}`}</div>
       </div>
     </div>
