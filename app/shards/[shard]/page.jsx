@@ -23,7 +23,7 @@ export default async function ShardPage({ params, searchParams }) {
   const sortedSpells = sortSpells(filteredSpells, searchParams.sort);
 
   return (
-    <main>
+    <main data-color={shard}>
       <Hero color={shard}>{`${shard} shard`}</Hero>
       <Spells spells={sortedSpells}/>
     </main>

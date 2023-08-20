@@ -266,5 +266,24 @@
     "range": "Self",
     "duration": "1 hour",
     "synopsis": "You enhance your weapon with light. The next time you attack a creature with that weapon and hit, you and your allies gain advantage on attack rolls made against that creature on the following turn. All allies add +2 to their damage rolls when attacking that creature.\n\nFor each White point spent after 1, add +1 to attack and damage rolls made agains that creature by your allies."
+  },
+  {
+    "name": "Conversion",
+    "schools": ["purple"],
+    "base_cost": [
+      {
+        "school": "purple",
+        "amount": 2
+      }
+    ],
+    "extra_cost": [
+      {
+        "school": "purple",
+        "amount": 2
+      }
+    ],
+    "duration": "Instantaneous",
+    "range": "Self",
+    "synopsis": "You convert the mana inside of you to another color. Gain 1 temporary mana from any color you wish. This mana lasts until a short or long rest, or until it is used.\n\nFor every 2 Purple points spent after 2, gain one additional mana of your choosing."
   }
 ]
