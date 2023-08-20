@@ -16,7 +16,7 @@
     ],
     "range": 60,
     "duration": "1 hour",
-    "synopsis": ""
+    "synopsis": "You curse the armour or weapon of a creature within range. For the duration, a cursed weapon has -1 to damage and attack rolls made with it; a cursed armour has -2 to its AC.\n\nFor each Purple point spent after 1, damage and attack rolls are decreased by 1.\nFor each Purple point spent after 1, armour AC is decreased by 1.\nSpend 2 Black points to affect both armour and weapon."
   },
   {
     "name": "Revealing Light",
@@ -29,7 +29,7 @@
     ],
     "range": 60,
     "duration": "1 hour",
-    "synopsis": ""
+    "synopsis": "You create a source of dim light on the point you choose within range. For the duration, the light illuminates a 30 feet radius, and any creature that the light touches is semi-transparent and can be targeted for attacks as if they were visible. All attack rolls made to creatures that the light touches gains Disadvantage. A creature with Greater Invisibility cast on them is not affected.\n\nFor each Purple point spent after 2, affected area is increased by 5 feet."
   },
   {
     "name": "Counterspell",
@@ -42,7 +42,7 @@
     ],
     "range": 120,
     "duration": "Instantaneous",
-    "synopsis": ""
+    "synopsis": "You target a spell that is about to be cast, and attempt to counter it. If the target spell is 3 points or less, you counter it immediately. Otherwise, you need to use extra soul shards of either Purple, or the same colored shard of the targeted spell, to match the cost of the targeted spell."
   },
   {
     "name": "Creeping Fire",
@@ -69,7 +69,7 @@
     ],
     "range": 60,
     "duration": "18 seconds (minimum)",
-    "synopsis": "A fire starts spreading from the point you choose within range to two more squares. The fire spreads to a square after each creature's turn. For each red point spent after 1, the fire spreads 1 square faster each turn. For each green point spent after 1, the amount of square the fire is going to spread increased by 1."
+    "synopsis": "A fire starts spreading from the point you choose within range to two more squares. The fire spreads to a square after each creature's turn.\n\nFor each red point spent after 1, the fire spreads 1 square faster each turn.\nFor each green point spent after 1, the amount of square the fire is going to spread increased by 1."
   },
   {
     "name": "Accelerate",
@@ -88,7 +88,7 @@
     ],
     "range": "Self",
     "duration": "Instantaneous",
-    "synopsis": "You get an extra action this round. If you attack with that action, add 1d6 of damage to a single attack. For each red point spent after 2, add an extra 1d6 of damage."
+    "synopsis": "You get an extra action this round. If you attack with that action, add 1d6 of damage to a single attack.\n\nFor each red point spent after 2, add an extra 1d6 of damage."
   },
   {
     "name": "Thorns of Haste",
@@ -124,7 +124,7 @@
     ],
     "range": "Self",
     "duration": "30 minutes",
-    "synopsis": "You turn yourself invisible for the duration. Anything you are wearing or holding stays visible. Spend 4 Purple shards to turn the spell into a normal invisiblity spell."
+    "synopsis": "You turn yourself invisible for the duration. Anything you are wearing or holding stays visible.\n\nSpend 4 Purple shards to turn the spell into a normal invisiblity spell."
   },
   {
     "name": "Life Vortex",
@@ -143,7 +143,7 @@
     ],
     "range": 10,
     "duration": "Instantaneous",
-    "synopsis": "You create a dark vortex that sucks up all life energy around the caster. All creatures within range, including the caster, has to make a Constitution saving throw and lose 2d4 worth of hit points if they fail. The caster gains temporary hit points equal to the damage dealt. A creature cannot be killed by this spell. If a creature does not have enough hit points, they drop to 1 hit point instead, and the caster receives what hit point they could steal. For each Black points spent after 3, damage is increased by 1d4. For each Black points spent after 3, range is increased by 5 feet."
+    "synopsis": "You create a dark vortex that sucks up all life energy around the caster. All creatures within range, including the caster, has to make a Constitution saving throw and lose 2d4 worth of hit points if they fail. The caster gains temporary hit points equal to the damage dealt. A creature cannot be killed by this spell. If a creature does not have enough hit points, they drop to 1 hit point instead, and the caster receives what hit point they could steal.\n\nFor each Black points spent after 3, damage is increased by 1d4.\nFor each Black points spent after 3, range is increased by 5 feet."
   },
   {
     "name": "Sever the Bloodline",
@@ -185,7 +185,7 @@
     ],
     "range": 5,
     "duration": "Instantaneous",
-    "synopsis": "You touch a creature within range, and heal them for 1d4 + 2. For each Green point spent after 1, healing is increased by 1d4. Spend 1 White point to target another creature."
+    "synopsis": "You touch a creature within range, and heal them for 1d4 + 2.\n\nFor each Green point spent after 1, healing is increased by 1d4.\nSpend 1 White point to target another creature."
   },
   {
     "name": "Changing Winds",
@@ -204,7 +204,7 @@
     ],
     "range": 60,
     "duration": "Instantaneous",
-    "synopsis": "You target a creature within range. The creature has to make a Dexterity saving throw and be pulled or pushed 10 feet on a fail. If the season is summer, target takes 4d4 fire damage. If the season is winter, the target is stunned and takes 1d6 cold damage. If the season is spring, the target is healed 2d6. If the season is autumn, the creature is pushed or pulled another 10 feets, and takes 1d8 lightning damage. For each Green point spent after 1, add 1 additional die according to the seasons."
+    "synopsis": "You target a creature within range. The creature has to make a Dexterity saving throw and be pulled or pushed 10 feet on a fail.\nIf the season is summer, target takes 4d4 fire damage.\nIf the season is winter, the target is stunned and takes 1d6 cold damage.\nIf the season is spring, the target is healed 2d6.\nIf the season is autumn, the creature is pushed or pulled another 10 feets, and takes 1d8 lightning damage.\n\nFor each Green point spent after 1, add 1 additional die according to the seasons."
   },
   {
     "name": "Pomegrenade",
@@ -246,7 +246,7 @@
     ],
     "range": 5,
     "duration": "1 hour",
-    "synopsis": "You touch two willing creatures. For the duration, the creatures get +1 to their damage and attack rolls made with weapons. Alternatively, they get +2 to their AC. For each White point spent after 3, add +1 to damage and attack rolls OR +2 to AC. For every 2 White points spent after 3, target one more creature."
+    "synopsis": "You touch two willing creatures. For the duration, the creatures get +1 to their damage and attack rolls made with weapons. Alternatively, they get +2 to their AC.\n\nFor each White point spent after 3, add +1 to damage and attack rolls OR +2 to AC.\nFor every 2 White points spent after 3, target one more creature."
   },
   {
     "name": "Guiding Blow",
@@ -265,6 +265,6 @@
     ],
     "range": "Self",
     "duration": "1 hour",
-    "synopsis": "You enhance your weapon with light. The next time you attack a creature with that weapon and hit, you and your allies gain advantage on attack rolls made against that creature on the following turn. All allies add +2 to their damage rolls when attacking that creature. For each White point spent after 1, add +1 to attack and damage rolls made agains that creature by your allies."
+    "synopsis": "You enhance your weapon with light. The next time you attack a creature with that weapon and hit, you and your allies gain advantage on attack rolls made against that creature on the following turn. All allies add +2 to their damage rolls when attacking that creature.\n\nFor each White point spent after 1, add +1 to attack and damage rolls made agains that creature by your allies."
   }
 ]

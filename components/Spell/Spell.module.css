@@ -71,3 +71,7 @@
   padding: 0.5rem;
   height: 500px;
 }
+
+.synopsis {
+  white-space: pre-wrap;
+}
