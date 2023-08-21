@@ -8,3 +8,6 @@ export default function Home() {
     </main>
   );
 };
+
+// TODO: Make so the sigin does not popup immediately after the site loads, put it on User component click
+// TODO: Connect firestore

@@ -44,6 +44,11 @@
   width: 40vw;
 }
 
+.spacer {
+  display: flex;
+  flex-grow: 1;
+}
+
 @media (prefers-color-scheme: dark) {
   .main {
     color: var(--p-black);

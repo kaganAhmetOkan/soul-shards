@@ -34,3 +34,5 @@ export function AuthContextProvider({ children }) {
     </AuthContext.Provider>
   );
 };
+
+// TODO: Create a loading component to be used here

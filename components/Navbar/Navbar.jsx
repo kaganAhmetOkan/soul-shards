@@ -4,6 +4,7 @@ import MenuButton from "../MenuButton/MenuButton";
 import NavButton from "../NavButton/NavButton";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import User from "../User/User";
 
 export default function Navbar() {
   const [isActive, setActive] = useState(false);
@@ -30,6 +31,8 @@ export default function Navbar() {
         <MenuButton isActive={isActive} />
         <NavButton icon="/images/home.png" alt="Home" isActive={isActive} href="/">Home</NavButton>
         <NavButton icon="/images/spells.png" alt="Spells" isActive={isActive} href="/shards">Soul Shards</NavButton>
+        <div className={style.spacer}></div>
+        <User isActive={isActive} />
       </div>
     </nav>
   );
