@@ -160,9 +160,9 @@
         "amount": 1
       }
     ],
-    "range": 30,
+    "range": 60,
     "duration": "Instantaneous",
-    "synopsis": "Choose a kin. All creatures within range from the choosen kin have to make a Constitution saving throw and receive 2d10 + 5 damage on a fail."
+    "synopsis": "Choose a kin. All creatures within range from the choosen kin have to make a Constitution saving throw and receive 2d12 + 10 damage on a fail.\n\nFor each Black points spent after 4, add another 1d12."
   },
   {
     "name": "Healing Hand",

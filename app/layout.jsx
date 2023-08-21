@@ -1,6 +1,8 @@
 import './globals.css';
 import { Ubuntu } from 'next/font/google';
 import Navbar from '@/components/Navbar/Navbar';
+import SignIn from '@/components/SignIn/SignIn';
+import { AuthContextProvider } from '@/firebase/AuthContext';
 
 const ubuntu = Ubuntu({
   subsets: ['latin'],
@@ -17,8 +19,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={ubuntu.className}>
-        <Navbar />
-        {children}
+        <AuthContextProvider>
+          <Navbar />
+          {children}
+          <SignIn />
+        </AuthContextProvider>
       </body>
     </html>
   );
