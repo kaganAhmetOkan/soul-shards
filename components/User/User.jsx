@@ -12,8 +12,6 @@ export default function User({ isActive }) {
     if (!user) signIn();
   }, [user]);
 
-  console.log(user);
-
   return (
     <div className={style.main} data-active={isActive}>
       <div className={style.img}>
