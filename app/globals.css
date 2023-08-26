@@ -74,7 +74,7 @@ main[data-color="green"] h1 {
 }
 
 button {
-  color: var(--p-dark-white);
+  color: var(--p-white);
   background-color: var(--p-light-blue);
   border: none;
   border-radius: 2px;

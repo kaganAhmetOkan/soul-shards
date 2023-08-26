@@ -5,9 +5,7 @@ export default function Home() {
   return (
     <main className={style.main}>
       <Hero>Soul Shards</Hero>
+      <p>{"Unfortunately, Soul Shards is not ready for public yet, and you cannot view all the information as of right now."}</p>
     </main>
   );
 };
-
-// TODO: Make so the sigin does not popup immediately after the site loads, put it on User component click
-// TODO: Connect firestore

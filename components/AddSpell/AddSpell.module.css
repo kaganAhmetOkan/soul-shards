@@ -1,0 +1,22 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.schools {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
