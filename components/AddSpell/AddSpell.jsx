@@ -1,14 +1,19 @@
 "use client";
 import style from "./AddSpell.module.css";
 import generateSpellID from "@/utils/generateSpellID";
+import { setDoc, doc } from "firebase/firestore";
+import firestore from "@/firebase/firestore";
+
+const db = firestore();
 
 export default function AddSpell() {
   const minValue = 0;
   const maxValue = 10;
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
+    const spell_id = generateSpellID(event.target[0].value);
     const schools = [];
     const base_cost = [];
     const extra_cost = [];
@@ -25,7 +30,6 @@ export default function AddSpell() {
     };
     
     const newSpell = {
-      id: generateSpellID(event.target[0].value),
       name: event.target[0].value,
       synopsis: event.target[1].value,
       range: event.target[2].value,
@@ -36,7 +40,10 @@ export default function AddSpell() {
       schools,
     };
 
-    console.log(newSpell);
+    const docRef = doc(db, "spells", spell_id);
+    await setDoc(docRef, newSpell);
+
+    console.log(newSpell, spell_id);
   };
 
   return (
@@ -46,7 +53,7 @@ export default function AddSpell() {
       <input placeholder="New Spell Name" required name="spell_name"></input>
 
       <label>Synopsis</label>
-      <input placeholder="Synopsis" required name="spell_synopsis"></input>
+      <textarea placeholder="Synopsis" required name="spell_synopsis"></textarea>
       
       <h2>Details</h2>
       <div className={style.details}>
@@ -106,3 +113,5 @@ export default function AddSpell() {
     </form>
   )
 }
+
+// TODO: add a page for editing spells. and edit button to spells
