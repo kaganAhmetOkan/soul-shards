@@ -89,6 +89,11 @@
   height: 500px;
 }
 
+.options {
+  display: flex;
+  margin-top: auto;
+}
+
 .synopsis {
   white-space: pre-wrap;
 }

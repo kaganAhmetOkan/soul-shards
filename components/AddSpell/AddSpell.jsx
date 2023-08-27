@@ -116,6 +116,3 @@ export default function AddSpell({ sid }) {
     </form>
   )
 }
-
-// TODO: add a page for editing spells. and edit button to spells
-// TODO: change firestore database to use random ids for items

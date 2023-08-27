@@ -2,11 +2,14 @@
 import style from "./Spell.module.css";
 import { useState } from "react";
 import { useParams } from "next/navigation";
+import Link from "next/link";
+import generateSpellID from "@/utils/generateSpellID";
 
 export default function Spell({ spell }) {
   const [enlarged, setEnlarged] = useState(false);
   const params = useParams();
   const range = Number.isInteger(spell.range) ? `${spell.range} feet` : spell.range;
+  const sid = generateSpellID(spell.name);
 
   return (
     <div className={style.main} data-enlarged={enlarged} data-color={params.shard}>
@@ -26,6 +29,9 @@ export default function Spell({ spell }) {
         <p className={style.synopsis}>{spell.synopsis}</p>
         <div>{`Range: ${range}`}</div>
         <div>{`Duration: ${spell.duration}`}</div>
+        <div className={style.options}>
+          <Link href={`/admin/add-spell?sid=${sid}`}>Edit</Link>
+        </div>
       </div>
     </div>
   );
