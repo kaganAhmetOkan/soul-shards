@@ -1,9 +1,11 @@
 import AddSpell from "@/components/AddSpell/AddSpell";
 
-export default function AddSpellPage() {
+export default function AddSpellPage({ searchParams }) {
+  const { sid } = searchParams;
+  
   return (
     <main>
-      <AddSpell />
+      <AddSpell sid={sid} />
     </main>
   );
 };

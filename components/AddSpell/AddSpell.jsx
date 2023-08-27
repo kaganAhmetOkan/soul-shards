@@ -3,12 +3,15 @@ import style from "./AddSpell.module.css";
 import generateSpellID from "@/utils/generateSpellID";
 import { setDoc, doc } from "firebase/firestore";
 import firestore from "@/firebase/firestore";
+import useSpell from "@/hooks/useSpell";
 
 const db = firestore();
 
-export default function AddSpell() {
+export default function AddSpell({ sid }) {
   const minValue = 0;
   const maxValue = 10;
+
+  const [spell, baseCost, extraCost] = useSpell(sid);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -50,63 +53,63 @@ export default function AddSpell() {
     <form className={style.main} onSubmit={handleSubmit}>
       <h2>Basics</h2>
       <label>Name</label>
-      <input placeholder="New Spell Name" required name="spell_name"></input>
+      <input placeholder="New Spell Name" required name="spell_name" defaultValue={spell.name ?? ""}></input>
 
       <label>Synopsis</label>
-      <textarea placeholder="Synopsis" required name="spell_synopsis"></textarea>
+      <textarea placeholder="Synopsis" required name="spell_synopsis" defaultValue={spell.synopsis ?? ""}></textarea>
       
       <h2>Details</h2>
       <div className={style.details}>
         <label>Range</label>
-        <input placeholder="Range" name="spell_range" required></input>
+        <input placeholder="Range" name="spell_range" required defaultValue={spell.range ?? ""}></input>
         
         <label>Duration</label>
-        <input placeholder="Duration" name="spell_duration" required></input>
+        <input placeholder="Duration" name="spell_duration" required defaultValue={spell.duration ?? ""}></input>
         
         <label>Casting Time</label>
-        <input placeholder="Casting Time" name="spell_cast_time"></input>
+        <input placeholder="Casting Time" name="spell_cast_time" defaultValue={spell.casting_time ?? ""}></input>
       </div>
       
       <h2>Base Cost</h2>
       <div className={style.schools}>
         <label htmlFor="school_purple">Purple</label>
-        <input type="number" defaultValue={0} min={minValue} max={maxValue} name="purple" id="school_purple"></input>
+        <input type="number" defaultValue={baseCost?.purple} min={minValue} max={maxValue} name="purple" id="school_purple"></input>
         
         <label htmlFor="school_green">Green</label>
-        <input type="number" defaultValue={0} min={minValue} max={maxValue} name="green" id="school_green"></input>
+        <input type="number" defaultValue={baseCost?.green} min={minValue} max={maxValue} name="green" id="school_green"></input>
         
         <label htmlFor="school_purple">Red</label>
-        <input type="number" defaultValue={0} min={minValue} max={maxValue} name="red" id="school_red"></input>
+        <input type="number" defaultValue={baseCost?.red} min={minValue} max={maxValue} name="red" id="school_red"></input>
         
         <label htmlFor="school_green">Black</label>
-        <input type="number" defaultValue={0} min={minValue} max={maxValue} name="black" id="school_black"></input>
+        <input type="number" defaultValue={baseCost?.black} min={minValue} max={maxValue} name="black" id="school_black"></input>
         
         <label htmlFor="school_purple">White</label>
-        <input type="number" defaultValue={0} min={minValue} max={maxValue} name="white" id="school_white"></input>
+        <input type="number" defaultValue={baseCost?.white} min={minValue} max={maxValue} name="white" id="school_white"></input>
         
         <label htmlFor="school_green">Grey</label>
-        <input type="number" defaultValue={0} min={minValue} max={maxValue} name="grey" id="school_grey"></input>
+        <input type="number" defaultValue={baseCost?.grey} min={minValue} max={maxValue} name="grey" id="school_grey"></input>
       </div>
 
       <h2>Extra Cost</h2>
       <div className={style.schools}>
         <label>Purple</label>
-        <input type="number" defaultValue={0} min={minValue} max={maxValue} name="purple"></input>
+        <input type="number" defaultValue={extraCost?.purple} min={minValue} max={maxValue} name="purple"></input>
         
         <label>Green</label>
-        <input type="number" defaultValue={0} min={minValue} max={maxValue} name="green"></input>
+        <input type="number" defaultValue={extraCost?.green} min={minValue} max={maxValue} name="green"></input>
         
         <label>Red</label>
-        <input type="number" defaultValue={0} min={minValue} max={maxValue} name="red"></input>
+        <input type="number" defaultValue={extraCost?.red} min={minValue} max={maxValue} name="red"></input>
         
         <label>Black</label>
-        <input type="number" defaultValue={0} min={minValue} max={maxValue} name="black"></input>
+        <input type="number" defaultValue={extraCost?.black} min={minValue} max={maxValue} name="black"></input>
         
         <label>White</label>
-        <input type="number" defaultValue={0} min={minValue} max={maxValue} name="white"></input>
+        <input type="number" defaultValue={extraCost?.white} min={minValue} max={maxValue} name="white"></input>
         
         <label>Grey</label>
-        <input type="number" defaultValue={0} min={minValue} max={maxValue} name="grey"></input>
+        <input type="number" defaultValue={extraCost?.grey} min={minValue} max={maxValue} name="grey"></input>
       </div>
 
       <button type="submit">Add Spell</button>
@@ -115,3 +118,4 @@ export default function AddSpell() {
 }
 
 // TODO: add a page for editing spells. and edit button to spells
+// TODO: change firestore database to use random ids for items
