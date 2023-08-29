@@ -28,8 +28,9 @@ export default function Spell({ spell }) {
       <div className={style.detailsContainer}>
         <div className={style.details}>
           <p className={style.synopsis}>{spell.synopsis}</p>
-          <div>{`Range: ${range}`}</div>
-          <div>{`Duration: ${spell.duration}`}</div>
+          <p><b>Range: </b>{spell.range}</p>
+          <p><b>Duration: </b>{spell.duration}</p>
+          <p><b>Casting Time: </b>{spell.casting_time}</p>
           <div className={style.options}>
             <Link href={`/admin/add-spell?sid=${sid}`}>Edit</Link>
           </div>

@@ -5,13 +5,13 @@ import { AuthContextProvider } from '@/firebase/AuthContext';
 
 const ubuntu = Ubuntu({
   subsets: ['latin'],
-  weight: "400",
+  weight: ["400", "700"],
   display: "swap",
 });
 
 export const metadata = {
   title: 'Soul Shards',
-  description: 'Explore the definitive encyclopedia for the Soul Shards TTRPG system.',
+  description: 'Explore the official encyclopedia for the Soul Shards TTRPG system.',
 };
 
 export default function RootLayout({ children }) {

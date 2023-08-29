@@ -46,7 +46,7 @@ export default function AddSpell({ sid }) {
     const docRef = doc(db, "spells", spell_id);
     await setDoc(docRef, newSpell);
 
-    console.log(newSpell, spell_id);
+    alert("New Spell Added");
   };
 
   return (
@@ -54,62 +54,79 @@ export default function AddSpell({ sid }) {
       <h2>Basics</h2>
       <label>Name</label>
       <input placeholder="New Spell Name" required name="spell_name" defaultValue={spell.name ?? ""}></input>
+      <p>{spell?.name}</p>
 
       <label>Synopsis</label>
       <textarea placeholder="Synopsis" required name="spell_synopsis" defaultValue={spell.synopsis ?? ""}></textarea>
-      
+      <p>{spell?.synopsis}</p>
+
       <h2>Details</h2>
       <div className={style.details}>
         <label>Range</label>
         <input placeholder="Range" name="spell_range" required defaultValue={spell.range ?? ""}></input>
+        <p>{spell?.range}</p>
         
         <label>Duration</label>
         <input placeholder="Duration" name="spell_duration" required defaultValue={spell.duration ?? ""}></input>
-        
+        <p>{spell?.duration}</p>
+
         <label>Casting Time</label>
         <input placeholder="Casting Time" name="spell_cast_time" defaultValue={spell.casting_time ?? ""}></input>
+        <p>{spell?.casting_time}</p>
       </div>
       
       <h2>Base Cost</h2>
       <div className={style.schools}>
         <label htmlFor="school_purple">Purple</label>
         <input type="number" defaultValue={baseCost?.purple} min={minValue} max={maxValue} name="purple" id="school_purple"></input>
+        <p>{baseCost?.purple ?? 0}</p>
         
         <label htmlFor="school_green">Green</label>
         <input type="number" defaultValue={baseCost?.green} min={minValue} max={maxValue} name="green" id="school_green"></input>
+        <p>{baseCost?.green ?? 0}</p>
         
         <label htmlFor="school_purple">Red</label>
         <input type="number" defaultValue={baseCost?.red} min={minValue} max={maxValue} name="red" id="school_red"></input>
+        <p>{baseCost?.red ?? 0}</p>
         
         <label htmlFor="school_green">Black</label>
         <input type="number" defaultValue={baseCost?.black} min={minValue} max={maxValue} name="black" id="school_black"></input>
+        <p>{baseCost?.black ?? 0}</p>
         
         <label htmlFor="school_purple">White</label>
         <input type="number" defaultValue={baseCost?.white} min={minValue} max={maxValue} name="white" id="school_white"></input>
+        <p>{baseCost?.white ?? 0}</p>
         
         <label htmlFor="school_green">Grey</label>
         <input type="number" defaultValue={baseCost?.grey} min={minValue} max={maxValue} name="grey" id="school_grey"></input>
+        <p>{baseCost?.grey ?? 0}</p>
       </div>
 
       <h2>Extra Cost</h2>
       <div className={style.schools}>
         <label>Purple</label>
         <input type="number" defaultValue={extraCost?.purple} min={minValue} max={maxValue} name="purple"></input>
+        <p>{extraCost?.purple ?? 0}</p>
         
         <label>Green</label>
         <input type="number" defaultValue={extraCost?.green} min={minValue} max={maxValue} name="green"></input>
+        <p>{extraCost?.green ?? 0}</p>
         
         <label>Red</label>
         <input type="number" defaultValue={extraCost?.red} min={minValue} max={maxValue} name="red"></input>
+        <p>{extraCost?.red ?? 0}</p>
         
         <label>Black</label>
         <input type="number" defaultValue={extraCost?.black} min={minValue} max={maxValue} name="black"></input>
+        <p>{extraCost?.black ?? 0}</p>
         
         <label>White</label>
         <input type="number" defaultValue={extraCost?.white} min={minValue} max={maxValue} name="white"></input>
+        <p>{extraCost?.white ?? 0}</p>
         
         <label>Grey</label>
         <input type="number" defaultValue={extraCost?.grey} min={minValue} max={maxValue} name="grey"></input>
+        <p>{extraCost?.grey ?? 0}</p>
       </div>
 
       <button type="submit">Add Spell</button>

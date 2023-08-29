@@ -95,7 +95,11 @@
 
 .options {
   display: flex;
-  margin-top: auto;
+}
+
+.options > a {
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 .synopsis {

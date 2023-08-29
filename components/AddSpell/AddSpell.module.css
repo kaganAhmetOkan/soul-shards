@@ -20,3 +20,7 @@
   justify-content: center;
   gap: 0.5rem;
 }
+
+.main > p {
+  white-space: pre-wrap;
+}
