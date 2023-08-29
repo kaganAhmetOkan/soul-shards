@@ -10,6 +10,7 @@ const db = firestore();
 export default function AddSpell({ sid }) {
   const minValue = 0;
   const maxValue = 10;
+  let cantrip = false;
 
   const [spell, baseCost, extraCost] = useSpell(sid);
 
@@ -24,20 +25,21 @@ export default function AddSpell({ sid }) {
     for (let i = 0; i < 6; i++) {
       if (event.target[i + 5].value > 0) {
         schools.push(event.target[i + 5].name);
-        base_cost.push({ school: event.target[i + 5].name, amount: event.target[i + 5].value });
+        base_cost.push({ school: event.target[i + 5].name, amount: Number.parseInt(event.target[i + 5].value) });
       };
 
       if (event.target[i + 11].value > 0) {
-        extra_cost.push({ school: event.target[i + 11].name, amount: event.target[i + 11].value });
+        extra_cost.push({ school: event.target[i + 11].name, amount: Number.parseInt(event.target[i + 11].value) });
       };
     };
-    
+
     const newSpell = {
       name: event.target[0].value,
       synopsis: event.target[1].value,
       range: event.target[2].value,
       duration: event.target[3].value,
       casting_time: event.target[4].value,
+      cantrip,
       base_cost,
       extra_cost,
       schools,
@@ -47,6 +49,11 @@ export default function AddSpell({ sid }) {
     await setDoc(docRef, newSpell);
 
     alert("New Spell Added");
+  };
+
+  function toggleCantrip() {
+    if (cantrip) cantrip = false;
+    else cantrip = true;
   };
 
   return (
@@ -71,7 +78,7 @@ export default function AddSpell({ sid }) {
         <p>{spell?.duration}</p>
 
         <label>Casting Time</label>
-        <input placeholder="Casting Time" name="spell_cast_time" defaultValue={spell.casting_time ?? ""}></input>
+        <input placeholder="Casting Time" name="spell_cast_time" required defaultValue={spell.casting_time ?? ""}></input>
         <p>{spell?.casting_time}</p>
       </div>
       
@@ -129,6 +136,11 @@ export default function AddSpell({ sid }) {
         <p>{extraCost?.grey ?? 0}</p>
       </div>
 
+      <h2>Cantrip</h2>
+      <label>
+        Cantrip: 
+        <input onClick={toggleCantrip} type="checkbox"></input>
+      </label>
       <button type="submit">Add Spell</button>
     </form>
   )

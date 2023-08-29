@@ -4,12 +4,14 @@ import { useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import generateSpellID from "@/utils/generateSpellID";
+import calculateTier from "@/utils/calculateTier";
 
 export default function Spell({ spell }) {
   const [enlarged, setEnlarged] = useState(false);
   const params = useParams();
   const sid = generateSpellID(spell.name);
-
+  const tier = spell.cantrip ? "Cantrip" : `Tier ${calculateTier(spell)}`;
+  
   return (
     <div className={style.main} data-enlarged={enlarged} data-color={params.shard}>
       <div className={style.titleBar} onClick={() => setEnlarged(!enlarged)}>
@@ -26,6 +28,7 @@ export default function Spell({ spell }) {
       </div>
       <div className={style.detailsContainer}>
         <div className={style.details}>
+          <em>{tier}</em>
           <p className={style.synopsis}>{spell.synopsis}</p>
           <p><b>Range: </b>{spell.range}</p>
           <p><b>Duration: </b>{spell.duration}</p>

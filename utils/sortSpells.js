@@ -11,16 +11,20 @@ export default function sortSpells(spells, sortMethod="") {
         let aCost = 0;
         let bCost = 0;
 
-        a.base_cost.forEach(cost => aCost += cost.amount);
-        b.base_cost.forEach(cost => bCost += cost.amount);
+        a.base_cost.forEach(cost => aCost += Number.parseInt(cost.amount));
+        b.base_cost.forEach(cost => bCost += Number.parseInt(cost.amount));
 
+        if (a.cantrip && !b.cantrip) return 1;
+        if (!a.cantrip && b.cantrip) return -1;
         if (aCost > bCost) return 1;
         if (aCost < bCost) return -1;
         return a.name.localeCompare(b.name);
       });
       break;
-    // Hello World
   };
 
   return spells;
 };
+
+// TODO: cantrip sorting doesnt seem to work
+// TODO: might wanna add tier calculation to spell json itself

@@ -24,3 +24,16 @@
 .main > p {
   white-space: pre-wrap;
 }
+
+.cantrips {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cantrips > label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
