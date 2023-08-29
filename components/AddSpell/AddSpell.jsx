@@ -62,7 +62,7 @@ export default function AddSpell({ sid }) {
   };
 
   useEffect(() => {
-    setCantrip(spell.cantrip);
+    setCantrip(spell.cantrip ?? false);
   }, [spell]);
 
   return (
