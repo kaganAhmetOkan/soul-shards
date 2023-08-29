@@ -1,5 +1,16 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 1rem;
+}
+
+.tier {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tier > h2 {
+  text-transform: capitalize;
+  text-align: end;
 }
