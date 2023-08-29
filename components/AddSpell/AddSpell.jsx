@@ -4,13 +4,14 @@ import generateSpellID from "@/utils/generateSpellID";
 import { setDoc, doc } from "firebase/firestore";
 import firestore from "@/firebase/firestore";
 import useSpell from "@/hooks/useSpell";
+import { useState, useEffect } from "react";
 
 const db = firestore();
 
 export default function AddSpell({ sid }) {
   const minValue = 0;
   const maxValue = 10;
-  let cantrip = false;
+  const [cantrip, setCantrip] = useState(false);
 
   const [spell, baseCost, extraCost] = useSpell(sid);
 
@@ -33,6 +34,10 @@ export default function AddSpell({ sid }) {
       };
     };
 
+    let tier = 0;
+
+    base_cost.forEach(cost => tier += Number.parseInt(cost.amount));
+
     const newSpell = {
       name: event.target[0].value,
       synopsis: event.target[1].value,
@@ -43,18 +48,22 @@ export default function AddSpell({ sid }) {
       base_cost,
       extra_cost,
       schools,
+      tier,
     };
 
     const docRef = doc(db, "spells", spell_id);
     await setDoc(docRef, newSpell);
 
-    alert("New Spell Added");
+    alert("Successful!");
   };
 
   function toggleCantrip() {
-    if (cantrip) cantrip = false;
-    else cantrip = true;
+    setCantrip(!cantrip);
   };
+
+  useEffect(() => {
+    setCantrip(spell.cantrip);
+  }, [spell]);
 
   return (
     <form className={style.main} onSubmit={handleSubmit}>
@@ -139,7 +148,7 @@ export default function AddSpell({ sid }) {
       <h2>Cantrip</h2>
       <label>
         Cantrip: 
-        <input onClick={toggleCantrip} type="checkbox"></input>
+        <input onClick={toggleCantrip} type="checkbox" value={cantrip} checked={cantrip}></input>
       </label>
       <button type="submit">Add Spell</button>
     </form>

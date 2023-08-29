@@ -11,12 +11,12 @@ export default function Spells({ school }) {
 
   spells.forEach(spell => {
     if (spell.cantrip) {
-      if (!tiers.cantrip) tiers.cantrips = [];
+      if (!Array.isArray(tiers.cantrips)) tiers.cantrips = [];
       tiers.cantrips.push(spell);
     } else {
-      let costAmount = 0;
-      spell.base_cost.forEach(cost => costAmount += Number.parseInt(cost.amount));
-      if (!tiers[`tier${costAmount}`]) tiers[`tier${costAmount}`] = [];
+      let costAmount = spell.tier ?? 0;
+      if (costAmount === 0) spell.base_cost.forEach(cost => costAmount += Number.parseInt(cost.amount));
+      if (!Array.isArray(tiers[`tier${costAmount}`])) tiers[`tier${costAmount}`] = [];
       tiers[`tier${costAmount}`].push(spell);
     };
   });
@@ -38,3 +38,5 @@ export default function Spells({ school }) {
     </div>
   );
 };
+
+// TODO: remove the tier calculators in various scripts
