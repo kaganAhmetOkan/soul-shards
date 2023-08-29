@@ -8,7 +8,6 @@ import generateSpellID from "@/utils/generateSpellID";
 export default function Spell({ spell }) {
   const [enlarged, setEnlarged] = useState(false);
   const params = useParams();
-  const range = Number.isInteger(spell.range) ? `${spell.range} feet` : spell.range;
   const sid = generateSpellID(spell.name);
 
   return (

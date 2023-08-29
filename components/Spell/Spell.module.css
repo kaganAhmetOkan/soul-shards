@@ -4,23 +4,23 @@
   width: 50vw;
 }
 
-.main[data-color="purple"] {
+.main[data-color="purple"] .titleBar {
   background: linear-gradient(90deg, var(--bg), var(--p-light-purple));
 }
 
-.main[data-color="green"] {
+.main[data-color="green"] .titleBar {
   background: linear-gradient(90deg, var(--bg), var(--p-light-green));
 }
 
-.main[data-color="red"] {
+.main[data-color="red"] .titleBar {
   background: linear-gradient(90deg, var(--bg), var(--p-light-red));
 }
 
-.main[data-color="white"] {
+.main[data-color="white"] .titleBar {
   background: linear-gradient(90deg, var(--bg), var(--p-dark-white));
 }
 
-.main[data-color="black"] {
+.main[data-color="black"] .titleBar {
   background: linear-gradient(90deg, var(--bg), var(--p-light-black));
 }
 
@@ -80,6 +80,10 @@
   flex-direction: column;
   gap: 0.5rem;
   min-height: 0;
+  background-color: var(--p-light-black);
+  background: linear-gradient(270deg, var(--bg), var(--p-dark-white));
+  padding: 0 0.5rem;
+  transition: 250ms;
 }
 
 .detailsContainer {
@@ -93,6 +97,10 @@
   grid-template-rows: 1fr;
 }
 
+.main[data-enlarged="true"] .details {
+  padding: 0.5rem;
+}
+
 .options {
   display: flex;
 }
@@ -104,4 +112,10 @@
 
 .synopsis {
   white-space: pre-wrap;
+}
+
+@media (prefers-color-scheme: dark) {
+  .details {
+    background: linear-gradient(270deg, var(--bg), var(--p-light-black));
+  }
 }
