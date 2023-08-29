@@ -25,12 +25,14 @@ export default function Spell({ spell }) {
           })}
         </div>
       </div>
-      <div className={style.details}>
-        <p className={style.synopsis}>{spell.synopsis}</p>
-        <div>{`Range: ${range}`}</div>
-        <div>{`Duration: ${spell.duration}`}</div>
-        <div className={style.options}>
-          <Link href={`/admin/add-spell?sid=${sid}`}>Edit</Link>
+      <div className={style.detailsContainer}>
+        <div className={style.details}>
+          <p className={style.synopsis}>{spell.synopsis}</p>
+          <div>{`Range: ${range}`}</div>
+          <div>{`Duration: ${spell.duration}`}</div>
+          <div className={style.options}>
+            <Link href={`/admin/add-spell?sid=${sid}`}>Edit</Link>
+          </div>
         </div>
       </div>
     </div>

@@ -79,14 +79,18 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  height: 0;
+  min-height: 0;
+}
+
+.detailsContainer {
+  display: grid;
+  grid-template-rows: 0fr;
   overflow: hidden;
   transition: 250ms;
 }
 
-.main[data-enlarged="true"] .details {
-  padding: 0.5rem;
-  height: 500px;
+.main[data-enlarged="true"] .detailsContainer {
+  grid-template-rows: 1fr;
 }
 
 .options {
