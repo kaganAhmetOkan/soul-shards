@@ -2,6 +2,7 @@
 import { onAuthStateChanged, getAuth } from "firebase/auth";
 import firebaseApp from "./config";
 import { createContext, useContext, useEffect, useState } from "react";
+import LoadingScreen from "@/components/LoadingScreen/LoadingScreen";
 
 const auth = getAuth(firebaseApp);
 
@@ -30,9 +31,7 @@ export function AuthContextProvider({ children }) {
 
   return (
     <AuthContext.Provider value={{ user }}>
-      {loading ? <div>Loading...</div> : children}
+      {loading ? <LoadingScreen /> : children}
     </AuthContext.Provider>
   );
 };
-
-// TODO: Create a loading component to be used here
